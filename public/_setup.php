@@ -1,6 +1,6 @@
 <?php
 // One-time schema installer. Delete this file after running.
-require_once __DIR__ . '/config/database.php';
+require_once __DIR__ . '/../config/database.php';
 
 $secret = $_GET['key'] ?? '';
 if ($secret !== 'setup-bdc-2026') {
