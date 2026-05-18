@@ -1,12 +1,9 @@
-FROM dunglas/frankenphp:latest
+FROM php:8.3-cli
 
-# Install MySQL PDO driver
-RUN install-php-extensions pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql
 
 WORKDIR /app
 COPY . .
-
 RUN mkdir -p storage/recordings
 
-# Place our Caddyfile where FrankenPHP expects it
-COPY Caddyfile /Caddyfile
+CMD php -S 0.0.0.0:${PORT:-8080} -t /app
