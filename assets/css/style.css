@@ -1,0 +1,53 @@
+/* RVM Recording Authorization Portal — custom overrides */
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Recording card header */
+.recording-card > .card-header {
+    background-color: #fff;
+}
+
+/* Timer monospace display */
+.timer-display {
+    font-family: monospace;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+/* Audio player sizing */
+audio {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Accepted badge */
+.accepted-badge {
+    font-size: 0.9rem;
+}
+
+/* Admin navbar brand */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: normal;
+}
+
+/* DL rows — tighter */
+dl.row dt {
+    font-weight: 600;
+}
+
+/* Card radius */
+.card {
+    border-radius: 0.5rem;
+}
+
+/* Table inside card — remove bottom border */
+.card .table:last-child {
+    margin-bottom: 0;
+}
+
+/* Public form max-width handled inline in submit.php */

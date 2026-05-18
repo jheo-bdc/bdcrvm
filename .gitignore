@@ -1,0 +1,16 @@
+# Uploaded recordings (ephemeral on Railway — do not commit)
+storage/recordings/*/
+
+# Keep the storage directory structure
+!storage/recordings/index.html
+
+# Local config overrides
+.env
+.env.local
+config/local.php
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
