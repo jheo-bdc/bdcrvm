@@ -7,7 +7,7 @@ if ($_mysqlUrl) {
     define('DB_HOST', $_p['host']);
     define('DB_PORT', (string)($_p['port'] ?? 3306));
     define('DB_NAME', ltrim($_p['path'] ?? '/railway', '/'));
-    define('DB_USER', urldecode($_p['user'] ?? 'root'));
+    define('DB_USER', urldecode($_p['user'] ?? '') ?: 'root');
     define('DB_PASS', urldecode($_p['pass'] ?? ''));
     unset($_p);
 } else {
