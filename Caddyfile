@@ -1,0 +1,23 @@
+{
+	frankenphp
+	admin off
+}
+
+:8080 {
+	root * /app
+	encode gzip
+
+	# Rewrite bare directory paths to their index.php
+	@dirIndex {
+		not path *.php
+		not path *.*
+		file {path}/index.php
+	}
+	rewrite @dirIndex {path}/index.php
+
+	# Execute PHP files directly — no front-controller fallback
+	@php path *.php
+	php @php
+
+	file_server
+}
