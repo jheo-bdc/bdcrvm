@@ -12,7 +12,7 @@ if ($_appUrl) {
 }
 define('BASE_URL', $_baseUrl);
 unset($_railwayDomain, $_appUrl, $_baseUrl);
-define('STORAGE_PATH',    __DIR__ . '/../storage/recordings');
+define('STORAGE_PATH', getenv('STORAGE_PATH') ?: __DIR__ . '/../storage/recordings');
 define('TIMEZONE',        'America/New_York');
 define('MAX_UPLOAD_MB',   50);
 
