@@ -25,6 +25,7 @@ $_admin_user  = $_is_admin ? current_user() : null;
       <ul class="navbar-nav me-auto">
         <li class="nav-item"><a class="nav-link" href="<?= e(BASE_URL) ?>/admin/campaigns.php">Campaigns</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= e(BASE_URL) ?>/admin/submissions.php">Submissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?= e(BASE_URL) ?>/admin/users.php">Users</a></li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item"><span class="navbar-text me-3 text-muted"><?= e($_admin_user['email']) ?></span></li>
