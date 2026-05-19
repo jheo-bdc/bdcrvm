@@ -2,6 +2,12 @@
 require_once __DIR__ . '/../includes/auth.php';
 require_login();
 
+$_allowed_user = 'jheo@bdcautomation.com';
+if ((current_user()['email'] ?? '') !== $_allowed_user) {
+    http_response_code(403);
+    exit('Access denied.');
+}
+
 $db = get_db();
 
 // Handle create
